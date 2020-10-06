@@ -1,3 +1,4 @@
+import path from 'path'
 // @ts-check
 const reactPlugin = require('vite-plugin-react')
 
@@ -6,7 +7,10 @@ const reactPlugin = require('vite-plugin-react')
  */
 const config = {
   jsx: 'react',
-  plugins: [reactPlugin]
+  plugins: [reactPlugin],
+  alias:{
+    '/src/': path.resolve(__dirname, 'src')
+  }
 }
 
 module.exports = config
